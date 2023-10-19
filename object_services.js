@@ -26,7 +26,7 @@ let services = {
 	haircut : "60 грн",
 	shave : "80 грн",
 	washingTheHead : "100 грн",
-    abc : '2',
+    //метод який створить новий об'єкт без методів, для подальшої роботи з ним
     objectWithoutFunc: function(){
         let newServices = {};
         for (let i in services){
@@ -75,11 +75,3 @@ let services = {
     }
 
 };
-
-
-console.log(services.objectWithoutFunc())
-console.log(services.price())
-console.log(services.minPrice())
-console.log(services.maxPrice())
-services.REWR = "1542";
-console.log(services.maxPrice())
