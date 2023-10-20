@@ -48,12 +48,10 @@ let services = {
     },
     minPrice: function(){
         let newServices = this.objectWithoutFunc();
-        let min = 0;
+        let min = Infinity;
+
         for (let i in newServices){
-            min = newServices[i];
-        }
-        for (let i in newServices){
-            if (min >= newServices[i]){
+            if (min > newServices[i]){
                 min = newServices[i];
             }
         }
@@ -62,12 +60,10 @@ let services = {
         
     maxPrice: function(){
         let newServices = this.objectWithoutFunc();
-        let max = 0;
+        let max = -Infinity;
+
         for (let i in newServices){
-            max = newServices[i];
-        }
-        for (let i in newServices){
-            if (max <= newServices[i]){
+            if (max < newServices[i]){
                 max = newServices[i];
             }
         }
