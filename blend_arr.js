@@ -16,7 +16,3 @@ function myBlend(arr) {
     }
     return arr;
 }
-
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(myBlend(arr));
-console.log(arr)

@@ -57,7 +57,7 @@ const company = {
 */
 
 
-function findValueByKey(companyName, obj) {
+function findValueByKey(obj, companyName) {
   if (obj.name === companyName) {
     console.log(obj);
   } else {
@@ -65,7 +65,7 @@ function findValueByKey(companyName, obj) {
       if (Array.isArray(obj[i])) {
         for (let j = 0; j < obj[i].length; j++) {
           if (typeof obj[i][j] === "object") {
-            const array_in_object = findValueByKey(companyName, obj[i][j]);
+            const array_in_object = findValueByKey(obj[i][j], companyName);
             if (array_in_object != undefined) {
               return array_in_object;
             }
@@ -76,5 +76,4 @@ function findValueByKey(companyName, obj) {
   }
   return null;
 }
-findValueByKey("Клієнт 1.2.3",company)
 
