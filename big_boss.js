@@ -59,7 +59,7 @@ const company = {
 
 function findValueByKey(obj, companyName) {
   if (obj.name === companyName) {
-    console.log(obj);
+    return obj;
   } else {
     for (let i in obj) {
       if (Array.isArray(obj[i])) {
@@ -76,4 +76,3 @@ function findValueByKey(obj, companyName) {
   }
   return null;
 }
-
