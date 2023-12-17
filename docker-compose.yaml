@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  newman-runner:
+    image: node:18
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./API_qauto_report.html:/JS_HILLEL/API_qauto_report.html
+    command: >
+      sh -c "newman run https://api.postman.com/collections/26914908-8b74de29-4e28-47f4-b0d5-53f5811d10da?apikey=PMAK-657ee71e717c2277b1cea649-7d7d969e3313f97600e0a6f41fcab5d38b -d env.json -r htmlextra --reporter-htmlextra-export "API_qauto_report.html""
